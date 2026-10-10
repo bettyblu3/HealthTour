@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: initial;
+    color-scheme: dark;
+    background-color: #061814;
+  }
+
+  body {
+    background-color: #061814;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #9EF7D7;
+    color: #061814;
+  }
+}
+
+/* 3D Card Flip Mechanics */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Leome & Partners Architectural Aesthetics */
+.leome-border {
+  border: 1px solid rgba(158, 247, 215, 0.18);
+}
+
+.leome-border-active {
+  border: 1px solid #9EF7D7;
+}
+
+.leome-pill {
+  background-color: #9EF7D7;
+  color: #061814;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.leome-pill:hover {
+  background-color: #FFFFFF;
+  color: #061814;
+  transform: translateY(-1px);
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04100D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #143D34;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A7263;
+}
