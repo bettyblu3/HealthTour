@@ -15,8 +15,8 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenPlanner, onOpenConsu
     <section className="relative min-h-[92vh] flex flex-col justify-between bg-forest-900 pt-10 pb-8 px-6 sm:px-10 overflow-hidden">
       
       {/* Subtle Right-Edge Editorial Tag */}
-      <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 z-30 bg-forest-950 border-l border-y border-mint-300/20 py-6 px-1.5 rounded-l-md items-center">
-        <span className="text-[10px] font-mono tracking-widest text-mint-muted uppercase [writing-mode:vertical-lr] rotate-180">
+      <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 z-30 bg-[#160E09] border-l border-y border-[#7A614A]/40 py-6 px-1.5 rounded-l-md items-center shadow-lg">
+        <span className="text-[10px] font-mono tracking-widest text-[#D8BEA3] uppercase [writing-mode:vertical-lr] rotate-180">
           JCI ACCREDITED • 2026
         </span>
       </div>
@@ -81,18 +81,18 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenPlanner, onOpenConsu
       </div>
 
       {/* Bottom Horizontal Minimalist Services Ticker */}
-      <div className="w-full border-t border-mint-300/10 pt-6 mt-4">
-        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-y-2 text-xs sm:text-sm font-medium text-mint-muted">
-          <a href="#expertise" className="hover:text-mint-300 transition-colors">
+      <div className="w-full border-t border-[#7A614A]/25 pt-6 mt-4">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap items-center justify-between gap-y-2 text-xs sm:text-sm font-medium text-[#D8BEA3]/80">
+          <a href="#expertise" className="hover:text-white transition-colors">
             {t.tickerHair}
           </a>
-          <a href="#expertise" className="hover:text-mint-300 transition-colors">
+          <a href="#expertise" className="hover:text-white transition-colors">
             {t.tickerDental}
           </a>
-          <a href="#expertise" className="hover:text-mint-300 transition-colors">
+          <a href="#expertise" className="hover:text-white transition-colors">
             {t.tickerPlastics}
           </a>
-          <a href="#expertise" className="hover:text-mint-300 transition-colors">
+          <a href="#expertise" className="hover:text-white transition-colors">
             {t.tickerEyes}
           </a>
         </div>

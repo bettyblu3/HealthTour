@@ -73,13 +73,13 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
   ];
 
   return (
-    <section id="expertise" className="relative py-24 sm:py-32 bg-forest-900 px-6 sm:px-12 border-b border-mint-300/10">
+    <section id="expertise" className="relative py-24 sm:py-32 bg-forest-900 px-6 sm:px-12 border-b border-[#7A614A]/25">
       <div className="mx-auto max-w-[1400px]">
         
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-16">
           <div className="flex items-start gap-5">
-            <LeomeEmblem size={52} className="text-white/90 shrink-0 mt-1" />
+            <LeomeEmblem size={52} className="text-[#D8BEA3] shrink-0 mt-1" />
             <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
               {t.expertiseTitleMain} <br />
               <span className="text-white/70">{t.expertiseTitleSub}</span>
@@ -87,10 +87,10 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
           </div>
 
           <div className="text-right">
-            <span className="text-sm font-mono tracking-widest text-white/80 uppercase underline decoration-white/30 underline-offset-4">
+            <span className="text-sm font-mono tracking-widest text-[#D8BEA3] uppercase underline decoration-[#8C7154]/40 underline-offset-4">
               {t.ourServices}
             </span>
-            <div className="mt-2 text-xs font-mono text-white/50">
+            <div className="mt-2 text-xs font-mono text-[#D8BEA3]/70">
               {language === 'TR' ? 'Ayrıntıları görmek için kartlara tıklayın ⟳' : 'Click cards to flip for details ⟳'}
             </div>
           </div>
@@ -114,15 +114,15 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                 >
                   
                   {/* FRONT SIDE (PHOTO + TITLE + FLIP CTA) */}
-                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 border border-white/10 hover:border-white/30 bg-[#061814]/90 backface-hidden flex flex-col justify-between transition-colors shadow-2xl group">
+                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 border border-[#8C7154]/30 hover:border-[#D8BEA3]/60 bg-[#160E09]/95 backface-hidden flex flex-col justify-between transition-colors shadow-2xl group">
                     
                     {/* Top Row: Number & Arrow / Flip hint */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono text-white/80 tracking-widest font-bold">
+                        <span className="text-xs font-mono text-[#D8BEA3] tracking-widest font-bold">
                           {item.num}
                         </span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/15 text-white/70">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#7A614A]/20 border border-[#8C7154]/40 text-[#D8BEA3]">
                           {item.badge}
                         </span>
                       </div>
@@ -172,13 +172,13 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
 
                   </div>
 
-                  {/* BACK SIDE (LUXURY DARK PROTOCOL SHEET) */}
-                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 bg-[#08221B] text-white border border-white/20 rotate-y-180 backface-hidden flex flex-col justify-between shadow-2xl">
+                  {/* BACK SIDE (LUXURY ESPRESSO & BRONZE PROTOCOL SHEET) */}
+                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 bg-gradient-to-b from-[#2A1D14] via-[#1D140D] to-[#120C08] text-white border border-[#8C7154]/40 rotate-y-180 backface-hidden flex flex-col justify-between shadow-2xl">
                     
                     {/* Top Row */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono font-bold tracking-widest uppercase text-white/80">
+                        <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#D8BEA3]">
                           {item.num} • {item.title}
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                           e.stopPropagation();
                           toggleFlip(item.id);
                         }}
-                        className="flex items-center gap-1.5 text-xs font-mono font-bold text-white/80 hover:text-white transition-colors"
+                        className="flex items-center gap-1.5 text-xs font-mono font-bold text-[#D8BEA3] hover:text-white transition-colors"
                         title={t.flipToPhoto}
                       >
                         <span>{t.flipToPhoto}</span>
@@ -201,10 +201,10 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                       {item.procedures.map((proc, pIdx) => (
                         <div
                           key={pIdx}
-                          className="text-sm sm:text-base font-bold tracking-tight flex items-center justify-between border-b border-white/10 pb-2.5 text-white/95"
+                          className="text-sm sm:text-base font-bold tracking-tight flex items-center justify-between border-b border-[#8C7154]/25 pb-2.5 text-white/95"
                         >
                           <span className="pr-4">{proc}</span>
-                          <span className="w-4 h-4 rounded-full bg-white/15 text-white flex items-center justify-center text-[10px] shrink-0 font-mono font-bold">
+                          <span className="w-4 h-4 rounded-full bg-[#7A614A]/30 border border-[#8C7154]/50 text-[#D8BEA3] flex items-center justify-center text-[10px] shrink-0 font-mono font-bold">
                             ✓
                           </span>
                         </div>
@@ -212,8 +212,8 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                     </div>
 
                     {/* Bottom Bar: Protocol & Action */}
-                    <div className="flex items-center justify-between pt-4 border-t border-white/15">
-                      <span className="text-xs font-mono font-semibold uppercase text-white/60">
+                    <div className="flex items-center justify-between pt-4 border-t border-[#8C7154]/30">
+                      <span className="text-xs font-mono font-semibold uppercase text-[#D8BEA3]/70">
                         {t.jciProtocol}
                       </span>
                       
@@ -223,7 +223,7 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                             e.stopPropagation();
                             toggleFlip(item.id);
                           }}
-                          className="px-3 py-1.5 rounded-full border border-white/20 text-xs font-mono text-white/80 hover:bg-white/10 transition-colors"
+                          className="px-3 py-1.5 rounded-full border border-[#8C7154]/40 text-xs font-mono text-[#D8BEA3] hover:bg-[#7A614A]/20 transition-colors"
                         >
                           ⟲ {t.flipToPhoto}
                         </button>
@@ -233,7 +233,7 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                             e.stopPropagation();
                             onOpenConsultation();
                           }}
-                          className="px-4 py-1.5 rounded-full bg-forest-900 text-mint-300 text-xs font-bold hover:bg-black transition-colors"
+                          className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D8BEA3] to-[#C4A482] hover:from-white hover:to-white text-[#18110B] text-xs font-bold transition-all shadow-md"
                         >
                           {t.getConsultation}
                         </button>
