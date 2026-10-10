@@ -33,36 +33,36 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-3 sm:gap-4">
             
             {/* Language Switcher Pill (TR | EN) */}
-            <div className="flex items-center p-0.5 rounded-full border border-mint-300/20 bg-forest-850 text-xs font-mono">
+            <div className="flex items-center px-3 py-1.5 rounded-full border border-white/25 bg-forest-950/60 backdrop-blur-sm text-xs font-mono text-white/80 gap-2.5">
               <button
                 onClick={() => onLanguageChange('TR')}
-                className={`px-2.5 py-1 rounded-full transition-all ${
+                className={`transition-colors ${
                   language === 'TR'
-                    ? 'bg-mint-300 text-forest-900 font-bold shadow-sm'
-                    : 'text-mint-muted hover:text-white'
+                    ? 'text-white font-bold'
+                    : 'text-white/50 hover:text-white'
                 }`}
               >
                 TR
               </button>
               <button
                 onClick={() => onLanguageChange('EN')}
-                className={`px-2.5 py-1 rounded-full transition-all ${
+                className={`transition-colors ${
                   language === 'EN'
-                    ? 'bg-mint-300 text-forest-900 font-bold shadow-sm'
-                    : 'text-mint-muted hover:text-white'
+                    ? 'text-white font-bold'
+                    : 'text-white/50 hover:text-white'
                 }`}
               >
                 EN
               </button>
             </div>
 
-            {/* Leome Signature Mint Menu Pill */}
+            {/* Menu Pill (Quiet Luxury Dark with White Text) */}
             <button
               onClick={() => setMenuOpen(true)}
-              className="flex items-center gap-2 px-5 py-2 rounded-full bg-mint-300 hover:bg-white text-forest-900 font-semibold text-xs tracking-wider transition-all duration-200"
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/25 bg-forest-950/60 hover:bg-forest-950/90 hover:border-white/40 text-white font-medium text-xs tracking-wider transition-all duration-200"
             >
               <span>{t.menu}</span>
-              <span className="text-sm font-mono leading-none">☰</span>
+              <span className="text-xs font-mono leading-none">☰</span>
             </button>
 
           </div>
