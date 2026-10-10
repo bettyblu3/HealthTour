@@ -19,10 +19,27 @@ export const AiTreatmentArchitect: React.FC<AiTreatmentArchitectProps> = ({
   const [hotelTier, setHotelTier] = useState<'bosphorus' | 'executive'>('bosphorus');
   const [guestCount, setGuestCount] = useState<number>(1);
 
+  const getTreatmentDisplayName = (item: TreatmentOption) => {
+    if (language === 'TR') return item.name;
+    const namesEn: Record<string, string> = {
+      'sapphire-fue': 'Hair Restoration (Sapphire FUE & DHI)',
+      'hollywood-smile': 'Smile Design (Hollywood Smile & Veneers)',
+      'all-on-4-implants': 'Dental Implants (All-on-4 / All-on-6)',
+      'piezo-rhinoplasty': 'Rhinoplasty (Ultrasonic Piezo Surgery)',
+      'breast-aesthetics': 'Breast Aesthetics (Augmentation, Lift & Implants)',
+      'body-contouring': 'Body Contouring (360 Vaser Lipo & BBL)',
+      'deep-plane-facelift': 'Facial & Neck Surgery (Deep Plane Facelift)',
+      'laser-eye-lasik': 'Vision Laser Surgery (Zeiss SMILE Pro)',
+      'longevity-wellness': 'Longevity & Cellular Medicine'
+    };
+    return namesEn[item.id] || item.name;
+  };
+
   const getWhatsAppShareUrl = () => {
+    const displayName = getTreatmentDisplayName(selectedTreatment);
     const text = encodeURIComponent(
       `HealthTour & Partners — ${language === 'TR' ? 'VIP Tedavi Planı' : 'VIP Treatment Plan'}:\n` +
-      `• ${language === 'TR' ? 'Cerrahi Tedavi' : 'Procedure'}: ${selectedTreatment.name}\n` +
+      `• ${language === 'TR' ? 'Cerrahi Tedavi' : 'Procedure'}: ${displayName}\n` +
       `• ${language === 'TR' ? 'Konaklama' : 'Accommodation'}: ${hotelTier === 'bosphorus' ? '5★ Boğaz Manzaralı Lüks Süit' : '5★ Executive Şehir Süiti'}\n` +
       `• ${language === 'TR' ? 'Misafir' : 'Guests'}: ${guestCount === 1 ? (language === 'TR' ? 'Yalnız (1 Kişi)' : 'Solo') : (language === 'TR' ? '+1 Refakatçi Dahil' : '+1 Companion Included')}\n\n` +
       `${language === 'TR' ? 'Resmi klinik dosya incelemesi ve kişiye özel VIP teklif talep ediyorum.' : 'I would like to request my official clinical review and bespoke VIP proposal.'}`
@@ -78,7 +95,7 @@ export const AiTreatmentArchitect: React.FC<AiTreatmentArchitectProps> = ({
                       }`}
                     >
                       <div>
-                        <div className="text-sm font-semibold">{item.name}</div>
+                        <div className="text-sm font-semibold">{getTreatmentDisplayName(item)}</div>
                         <div className={`text-xs ${isSelected ? 'text-[#D8BEA3]/90' : 'text-white/50'}`}>
                           {item.stayDays} {t.nightStay} • {item.recoveryDays} {t.recoveryDays}
                         </div>
@@ -166,7 +183,7 @@ export const AiTreatmentArchitect: React.FC<AiTreatmentArchitectProps> = ({
                     {t.officialRateCard}
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mt-1">
-                    {selectedTreatment.name}
+                    {getTreatmentDisplayName(selectedTreatment)}
                   </h3>
                   <p className="text-xs text-[#D8BEA3]/70 mt-1">
                     All-Inclusive VIP Protocol • Istanbul Clinical Campus

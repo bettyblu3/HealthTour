@@ -4,7 +4,9 @@ import { Currency } from './types';
 import { Language } from './i18n/translations';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { OfficialTrustBar } from './components/OfficialTrustBar';
 import { AreasOfExpertise } from './components/AreasOfExpertise';
+import { VipTravelExperience } from './components/VipTravelExperience';
 import { SurgicalFaculty } from './components/SurgicalFaculty';
 import { AiTreatmentArchitect } from './components/AiTreatmentArchitect';
 import { Footer } from './components/Footer';
@@ -18,6 +20,7 @@ export const App: React.FC = () => {
   });
   const [activeCurrency, setActiveCurrency] = useState<Currency>('EUR');
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const handleLanguageChange = (newLang: Language) => {
     setLanguage(newLang);
@@ -77,6 +80,8 @@ export const App: React.FC = () => {
         onLanguageChange={handleLanguageChange}
         onOpenPlanner={() => scrollToSection('planner')}
         onOpenConsultation={() => setIsConsultationModalOpen(true)}
+        isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
       />
 
       {/* 2. Hero: "HAYALİNİZDEKİ / [Sağlığınız. Odağımız. Card] / SAĞLIK GELECEĞİ" */}
@@ -86,10 +91,22 @@ export const App: React.FC = () => {
         onOpenConsultation={() => setIsConsultationModalOpen(true)}
       />
 
+      {/* 2.5. Official Accreditation & Trust Bar (Ministry of Health, JCI, TURSAB) */}
+      <OfficialTrustBar
+        language={language}
+      />
+
       {/* 3. Architectural Areas of Expertise with Images & 3D Flip */}
       <AreasOfExpertise
         language={language}
         onOpenConsultation={() => setIsConsultationModalOpen(true)}
+      />
+
+      {/* 3.5. Crisp Luminous White VIP Travel & 5★ Concierge Experience */}
+      <VipTravelExperience
+        language={language}
+        onOpenConsultation={() => setIsConsultationModalOpen(true)}
+        onScrollToPlanner={() => scrollToSection('planner')}
       />
 
       {/* 4. Surgical Faculty with Hand-Held Phone Mockup */}
@@ -117,9 +134,10 @@ export const App: React.FC = () => {
         onClose={() => setIsConsultationModalOpen(false)}
       />
 
-      {/* 8. Quick WhatsApp Floating Interactive Chat */}
+      {/* 8. Quick WhatsApp Floating Interactive Chat (Hidden when Menu or Modal is Open) */}
       <QuickWhatsAppChat
         language={language}
+        isVisible={!isMenuOpen && !isConsultationModalOpen}
       />
 
     </div>

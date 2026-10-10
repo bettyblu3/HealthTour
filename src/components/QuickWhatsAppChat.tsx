@@ -5,9 +5,10 @@ import { MessageCircle, X, Send, Sparkles, CheckCircle2 } from 'lucide-react';
 
 interface QuickWhatsAppChatProps {
   language: Language;
+  isVisible?: boolean;
 }
 
-export const QuickWhatsAppChat: React.FC<QuickWhatsAppChatProps> = ({ language }) => {
+export const QuickWhatsAppChat: React.FC<QuickWhatsAppChatProps> = ({ language, isVisible = true }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedTopic, setSelectedTopic] = useState<string>('');
   const [customText, setCustomText] = useState<string>('');
@@ -17,20 +18,24 @@ export const QuickWhatsAppChat: React.FC<QuickWhatsAppChatProps> = ({ language }
   const topicsTR = [
     { id: 'hair', label: '💇‍♂️ Saç Ekimi (Safir/DHI)', msg: 'Merhaba, Safir FUE / DHI Saç Ekimi VIP protokolü hakkında detaylı bilgi ve fiyat teklifi almak istiyorum.' },
     { id: 'dental', label: '🦷 Hollywood Smile & Diş', msg: 'Merhaba, Hollywood Smile ve E-Max porselen kaplama tedavisi için bilgi almak istiyorum.' },
-    { id: 'plastics', label: '💎 Plastik Cerrahi & Yüz', msg: 'Merhaba, Yüz germe / Rinoplasti cerrahisi ve hekim kadronuz hakkında danışmanlık rica ediyorum.' },
-    { id: 'eyes', label: '👁️ Zeiss SMILE Pro Göz', msg: 'Merhaba, Zeiss SMILE Pro No-Touch göz lazeri operasyonu için uygunluk ve süreç hakkında bilgi almak istiyorum.' },
-    { id: 'vip', label: '🏨 VIP Süit & Transfer', msg: 'Merhaba, 5★ Boğaz manzaralı süit ve VIP transfer dahil her şey dahil tedavi süreçleri hakkında görüşmek istiyorum.' }
+    { id: 'plastics', label: '💎 Burun & Yüz Germe', msg: 'Merhaba, Piezo Rinoplasti / Deep Plane Yüz Germe cerrahisi hakkında bilgi almak istiyorum.' },
+    { id: 'breast_body', label: '✨ Meme & Vücut Estetiği', msg: 'Merhaba, Meme estetiği ve 360 Vaser Liposuction ameliyat paketleri hakkında görüşmek istiyorum.' },
+    { id: 'eyes', label: '👁️ Zeiss SMILE Pro Göz', msg: 'Merhaba, Zeiss SMILE Pro No-Touch göz lazeri operasyonu için bilgi almak istiyorum.' },
+    { id: 'vip', label: '🏨 VIP Süit & Transfer', msg: 'Merhaba, 5★ Boğaz manzaralı süit ve Maybach VIP transfer dahil her şey dahil tedavi süreci hakkında görüşmek istiyorum.' }
   ];
 
   const topicsEN = [
-    { id: 'hair', label: '💇‍♂️ Hair (Sapphire/DHI)', msg: 'Hello, I would like to inquire about your Sapphire FUE & DHI Hair Restoration VIP protocols.' },
-    { id: 'dental', label: '🦷 Hollywood Smile', msg: 'Hello, I would like a consultation regarding Hollywood Smile architecture and dental aesthetics in Istanbul.' },
-    { id: 'plastics', label: '💎 Plastic Surgery', msg: 'Hello, I would like to consult with your board-certified plastic surgery team.' },
+    { id: 'hair', label: '💇‍♂️ Hair Restoration (FUE/DHI)', msg: 'Hello, I would like to inquire about your Sapphire FUE & DHI Hair Restoration VIP protocols.' },
+    { id: 'dental', label: '🦷 Hollywood Smile & Veneers', msg: 'Hello, I would like a consultation regarding Hollywood Smile architecture and dental aesthetics in Istanbul.' },
+    { id: 'plastics', label: '💎 Rhinoplasty & Facelift', msg: 'Hello, I would like to consult with your board-certified plastic surgery team for nose/face surgery.' },
+    { id: 'breast_body', label: '✨ Breast & Body Aesthetics', msg: 'Hello, I would like to inquire about Breast Surgery / 360 Vaser Liposuction procedures.' },
     { id: 'eyes', label: '👁️ Zeiss SMILE Laser', msg: 'Hello, I am interested in Zeiss SMILE Pro refractive laser surgery details and availability.' },
-    { id: 'vip', label: '🏨 VIP Suite & Concierge', msg: 'Hello, I would like to learn more about your all-inclusive 5-star Bosphorus suites and VIP transfers.' }
+    { id: 'vip', label: '🏨 5★ Suites & Concierge', msg: 'Hello, I would like to learn more about your all-inclusive 5-star Bosphorus suites and VIP transfers.' }
   ];
 
   const currentTopics = language === 'TR' ? topicsTR : topicsEN;
+
+  if (!isVisible) return null;
 
   const handleTopicClick = (msg: string) => {
     setSelectedTopic(msg);

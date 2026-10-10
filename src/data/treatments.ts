@@ -4,7 +4,7 @@ export const TREATMENTS: TreatmentOption[] = [
   {
     id: 'sapphire-fue',
     category: 'hair',
-    name: 'Safir FUE Saç Ekimi',
+    name: 'Saç Ekimi (Safir FUE & DHI)',
     shortDesc: 'Doğal açılı safir mikro uçlarla maksimum sıklık ve izsiz doku iyileşmesi.',
     description: 'Değerli safir cevherinden üretilen 0.6 - 0.8 mm mikro uçlarla açılan V şeklindeki mikro kanallar, greftlerin en doğal açıyla yerleştirilmesini sağlar. Sıfır doku hasarı ve 3 kat daha hızlı iyileşme.',
     basePriceEur: 1950,
@@ -25,32 +25,9 @@ export const TREATMENTS: TreatmentOption[] = [
     iconName: 'Sparkles'
   },
   {
-    id: 'dhi-choi',
-    category: 'hair',
-    name: 'DHI Choi Pen Saç Ekimi',
-    shortDesc: 'Tıraşsız seçenek, kanal açmadan doğrudan implantasyon ile ultra yoğunluk.',
-    description: 'Choi Implanter kalemi kullanılarak donör bölgeden alınan greftler eşzamanlı olarak hedeflenen alana nakledilir. Tıraşsız saç ekimi ve saç aralarını sıklaştırma için altın standarttır.',
-    basePriceEur: 2350,
-    ukPriceEur: 8900,
-    usPriceEur: 12000,
-    stayDays: 3,
-    recoveryDays: 5,
-    features: [
-      'Kanal Açmadan Direkt Ekim',
-      'Tıraşsız Seçenek (Unshaven DHI)',
-      'Sıfır Kabuklanma & Hızlı İyileşme',
-      'Doğal Ön Saç Çizgisi Tasarımı',
-      'VIP Özel Cerrahi Ekip'
-    ],
-    tags: ['Tıraşsız Seçenek', 'Ultra Yoğunluk', 'Choi Pen'],
-    rating: 4.98,
-    reviewsCount: 2190,
-    iconName: 'Zap'
-  },
-  {
     id: 'hollywood-smile',
     category: 'dental',
-    name: 'Hollywood Smile & E-Max Kaplama',
+    name: 'Diş & Gülüş Estetiği (Hollywood Smile)',
     shortDesc: 'Dijital gülüş tasarımı ve biyouyumlu estetik zirkonyum / E-Max kaplamalar.',
     description: '3D AI yüz ve dudak oranı tarayıcısı ile kişiye özel tasarlanan, ışık geçirgenliği doğal dişe en yakın olan E-Max ve zirkonyum porselen restorasyonları.',
     basePriceEur: 2750,
@@ -73,7 +50,7 @@ export const TREATMENTS: TreatmentOption[] = [
   {
     id: 'all-on-4-implants',
     category: 'dental',
-    name: 'All-on-4 / All-on-6 İmplantoloji',
+    name: 'Diş İmplantı (All-on-4 / All-on-6 Sabit Diş)',
     shortDesc: 'Tam dişsizlik durumlarında aynı gün sabit hibrit protez konforu.',
     description: 'Straumann veya Nobel Biocare orijinal İsviçre/Alman implant sistemleri ile kemik erimesi olan çenelerde bile 1 günde sabit protez imkanı sunan devrimsel teknik.',
     basePriceEur: 3800,
@@ -96,7 +73,7 @@ export const TREATMENTS: TreatmentOption[] = [
   {
     id: 'piezo-rhinoplasty',
     category: 'plastics',
-    name: 'Piezo Ultrasonik Rinoplasti',
+    name: 'Burun Estetiği (Piezo Rinoplasti)',
     shortDesc: 'Ses dalgalarıyla kemiği milimetrik şekillendiren morluksuz burun estetiği.',
     description: 'Geleneksel kırma yöntemleri yerine ultrasonik ses dalgaları kullanan Piezo cihazıyla, yumuşak doku ve damarlara dokunmadan kemik ve kıkırdak milimetrik biçimde şekillendirilir.',
     basePriceEur: 3200,
@@ -117,9 +94,55 @@ export const TREATMENTS: TreatmentOption[] = [
     iconName: 'Eye'
   },
   {
+    id: 'breast-aesthetics',
+    category: 'plastics',
+    name: 'Meme Estetiği (Büyütme, Dikleştirme & Protez)',
+    shortDesc: 'FDA onaylı mentor/motiva protezler ile doğal dekolte ve simetri estetiği.',
+    description: 'Kişiye özel anatomik veya yuvarlak kohezif jel silikon protezlerle, kas altı veya dual-plane teknikle izsiz meme büyütme, dikleştirme ve asimetri düzeltme cerrahisi.',
+    basePriceEur: 3400,
+    ukPriceEur: 10500,
+    usPriceEur: 18000,
+    stayDays: 6,
+    recoveryDays: 7,
+    features: [
+      'FDA Onaylı Orijinal Mentor / Motiva Protezler',
+      'Gizli İç Çamaşırı Altı Mikro Kesi',
+      '3D Ameliyat Öncesi Beden Simülasyonu',
+      'Ömür Boyu Uluslararası Protez Pasaportu',
+      'Özel Medikal Destek Sütyeni Dahil'
+    ],
+    tags: ['FDA Onaylı Protez', 'Doğal Dekolte', 'Ömür Boyu Garanti'],
+    rating: 4.98,
+    reviewsCount: 1450,
+    iconName: 'Sparkles'
+  },
+  {
+    id: 'body-contouring',
+    category: 'plastics',
+    name: 'Vücut Şekillendirme (360 Vaser Lipo & BBL)',
+    shortDesc: 'Ultrasonik ses dalgalarıyla bel inceltme, karın kası ve vücut hatları.',
+    description: 'Gelişmiş Vaser ultrasonik liposuction teknolojisiyle çevre dokulara zarar vermeden inatçı yağların eritilmesi ve kum saati vücut hattı oluşturulması.',
+    basePriceEur: 3600,
+    ukPriceEur: 12000,
+    usPriceEur: 21000,
+    stayDays: 6,
+    recoveryDays: 7,
+    features: [
+      '360 Derece Karın, Bel ve Sırt Şekillendirme',
+      'Vaser Ultrasonik Morluksuz Teknoloji',
+      'Özel Medikal Kompresyon Korsesi Dahil',
+      '2 Seans Lenfatik Drenaj Masajı Dahil',
+      'JCI Akredite Hastane & VIP Süit'
+    ],
+    tags: ['360 Vaser Lipo', 'Kum Saati Formu', 'İzsiz'],
+    rating: 4.96,
+    reviewsCount: 1120,
+    iconName: 'Sparkles'
+  },
+  {
     id: 'deep-plane-facelift',
     category: 'plastics',
-    name: 'Deep Plane Yüz Germe & Boyun',
+    name: 'Yüz & Boyun Germe (Deep Plane Facelift)',
     shortDesc: 'Mimikleri dondurmadan kas tabakasını gençleştiren doğal yüz cerrahisi.',
     description: 'Cildi sadece çekmek yerine, altındaki SMAS ve kas bağ dokusunu gençlik anatomisine geri taşıyan Deep Plane tekniği ile 10-15 yıl geriye dönük kalıcı gençleşme sağlanır.',
     basePriceEur: 4900,
@@ -142,7 +165,7 @@ export const TREATMENTS: TreatmentOption[] = [
   {
     id: 'laser-eye-lasik',
     category: 'eyes',
-    name: 'SMILE Pro & No-Touch Lazer Göz',
+    name: 'Göz Cerrahisi & Lazer (Zeiss SMILE Pro)',
     shortDesc: 'Gözlüğe ve lense 10 saniyede son veren yeni nesil kornea cerrahisi.',
     description: 'Carl Zeiss VisuMax femtosaniye lazer teknolojisi ile kesisiz, ağrısız ve ertesi gün normal hayata dönülebilen en gelişmiş refraktif cerrahi uygulaması.',
     basePriceEur: 1600,

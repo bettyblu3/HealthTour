@@ -34,13 +34,18 @@ export const TRANSLATIONS = {
 
     // Areas of Expertise
     expertiseTitleMain: 'Uzmanlık',
-    expertiseTitleSub: 'alanlarımız',
+    expertiseTitleSub: 'Alanlarımız',
     ourServices: 'Hizmetlerimiz',
     flipToDetails: 'Ayrıntıları görmek için karta tıklayın',
     flipToPhoto: 'Görsele dön',
     clickToFlip: 'Ayrıntıları Döndür ⟳',
     jciProtocol: 'JCI Akredite Protokol',
     getConsultation: 'Konsültasyon Al',
+
+    // VIP Travel & Concierge Section (Luminous White)
+    vipTravelTitle: 'VIP Seyahat & 5★ Konaklama',
+    vipTravelSubtitle: 'Tedaviniz süresince lüks Boğaz süitleri, özel şoförlü VIP transferler ve kişisel medikal tercümanınız ile 7/24 yanınızdayız.',
+    vipTravelBadge: 'ALL-INCLUSIVE LUXURY CONCIERGE',
 
     // Expertise Cards Content
     hairTitle: 'Saç Restorasyonu',
@@ -172,14 +177,19 @@ export const TRANSLATIONS = {
     billboardCta: '→ Consultation & Case Review',
 
     // Areas of Expertise
-    expertiseTitleMain: 'Our areas',
-    expertiseTitleSub: 'of expertise',
+    expertiseTitleMain: 'Areas of',
+    expertiseTitleSub: 'Expertise',
     ourServices: 'Our Services',
     flipToDetails: 'Click card to view clinical details',
     flipToPhoto: 'View Photo',
     clickToFlip: 'Flip Details ⟳',
     jciProtocol: 'JCI Accredited Protocol',
     getConsultation: 'Request Review',
+
+    // VIP Travel & Concierge Section (Luminous White)
+    vipTravelTitle: 'VIP Travel & 5★ Concierge',
+    vipTravelSubtitle: 'Throughout your journey, enjoy 5-star Bosphorus suites, private Maybach transfers, and personal medical interpreter assistance 24/7.',
+    vipTravelBadge: 'ALL-INCLUSIVE LUXURY CONCIERGE',
 
     // Expertise Cards Content
     hairTitle: 'Hair Restoration',

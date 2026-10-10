@@ -29,14 +29,15 @@ export const ContactConsultationModal: React.FC<ContactConsultationModalProps> =
   const getTreatmentName = (item: { id: string; name: string }) => {
     if (language === 'TR') return item.name;
     const namesEn: Record<string, string> = {
-      'sapphire-fue': 'Sapphire FUE Hair Restoration',
-      'dhi-choi': 'DHI Choi Pen Hair Restoration',
-      'hollywood-smile': 'Hollywood Smile & E-Max Veneers',
-      'all-on-4': 'All-on-4 / All-on-6 Dental Implants',
-      'piezo-rhino': 'Piezo Ultrasonic Rhinoplasty',
-      'deep-plane-facelift': 'Deep Plane Face & Neck Lift',
-      'smile-pro-laser': 'Zeiss SMILE Pro & No-Touch Eye Laser',
-      'longevity-cellular': 'Longevity & Cellular Rejuvenation'
+      'sapphire-fue': 'Hair Restoration (Sapphire FUE & DHI)',
+      'hollywood-smile': 'Smile Design (Hollywood Smile & Veneers)',
+      'all-on-4-implants': 'Dental Implants (All-on-4 / All-on-6)',
+      'piezo-rhinoplasty': 'Rhinoplasty (Ultrasonic Piezo Nose Surgery)',
+      'breast-aesthetics': 'Breast Aesthetics (Augmentation, Lift & Implants)',
+      'body-contouring': 'Body Contouring (360 Vaser Lipo & BBL)',
+      'deep-plane-facelift': 'Facial & Neck Surgery (Deep Plane Facelift)',
+      'laser-eye-lasik': 'Vision Laser Surgery (Zeiss SMILE Pro)',
+      'longevity-wellness': 'Longevity & Cellular Medicine (Exosomes & NAD+)'
     };
     return namesEn[item.id] || item.name;
   };

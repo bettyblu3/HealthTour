@@ -54,10 +54,10 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
       id: '03',
       num: '03',
       title: t.plasticsTitle,
-      categoryLabel: language === 'TR' ? 'Yüz & Vücut Rekonstrüksiyonu' : 'Facial & Body Aesthetics',
+      categoryLabel: language === 'TR' ? 'Burun, Meme & Vücut Cerrahisi' : 'Rhinoplasty, Breast & Body',
       image: '/images/plastic-surgery-perfect.jpg',
       procedures: t.plasticsProcedures,
-      badge: 'Piezo Ultrasonic',
+      badge: language === 'TR' ? 'Burun, Meme & Vücut' : 'Nose, Breast & Body',
       objectPosition: 'object-center'
     },
     {
