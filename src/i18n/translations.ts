@@ -28,7 +28,7 @@ export const TRANSLATIONS = {
     tickerEyes: 'Göz Cerrahisi & Longevity',
 
     // Billboard
-    billboardTitle: 'Sağlığınız. Odağımız.',
+    billboardTitle: 'Sağlığınız, Odağımız.',
     billboardSubtitle: 'İngiltere ve Avrupa bekleme listelerini ve klinik karmaşayı ortadan kaldırıyoruz; böylece tam bir güvenle geleceğe adım atıyorsunuz.',
     billboardCta: '→ Konsültasyon ve Detaylar',
 
@@ -172,7 +172,7 @@ export const TRANSLATIONS = {
     tickerEyes: 'Ophthalmology & Longevity',
 
     // Billboard
-    billboardTitle: 'Your health. Our focus.',
+    billboardTitle: 'Your health, our focus.',
     billboardSubtitle: 'We cut through NHS waitlists and clinical complexity so you can move forward with absolute confidence.',
     billboardCta: '→ Consultation & Case Review',
 

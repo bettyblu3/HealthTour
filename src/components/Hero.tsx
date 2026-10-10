@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenPlanner, onOpenConsu
             {/* Text Area */}
             <div className="max-w-xl space-y-2 sm:space-y-3">
               <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-                {language === 'TR' ? 'Sağlığınız. Odağımız.' : 'Your health. Our focus.'}
+                {language === 'TR' ? 'Sağlığınız, Odağımız.' : 'Your health, our focus.'}
               </h3>
 
               <p className="text-xs sm:text-base text-white/80 font-normal leading-relaxed max-w-lg">

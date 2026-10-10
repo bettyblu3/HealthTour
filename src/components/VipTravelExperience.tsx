@@ -32,8 +32,8 @@ export const VipTravelExperience: React.FC<VipTravelExperienceProps> = ({
     {
       icon: Hotel,
       num: '02',
-      tag: isTr ? '5 Yıldızlı Boğaz Kıyısı Konforu' : '5-Star Bosphorus Waterfront',
-      title: isTr ? '5★ Boğaz Manzaralı Lüks Süitler' : '5-Star Bosphorus Luxury Suites',
+      tag: isTr ? '5 Yıldızlı Boğaz Kıyısında Konaklama Konforu' : '5-Star Bosphorus Waterfront Stay',
+      title: isTr ? '5★ Boğaz Manzaralı Lüks Süit Konaklaması' : '5-Star Bosphorus Luxury Suite Stay',
       desc: isTr
         ? 'İyileşme sürecinizi stresten uzak, Boğaz manzaralı seçkin 5 yıldızlı süitlerde geçirin. Mandarin Oriental, Four Seasons veya Swissotel iş ortaklığımız ile refakatçiniz dahil her şey dahil konaklama.'
         : 'Rest and recover in tranquil 5-star suites with panoramic Bosphorus views. In partnership with Mandarin Oriental and Swissotel, all-inclusive for you and your companion.',
@@ -58,12 +58,12 @@ export const VipTravelExperience: React.FC<VipTravelExperienceProps> = ({
     {
       icon: Stethoscope,
       num: '04',
-      tag: isTr ? 'Klinik İyileşme Protokolü' : 'Clinical Recovery Protocol',
-      title: isTr ? 'Otelde Hemşirelik & 12 Ay Dijital Takip' : 'In-Suite Nursing & 12-Month Follow-Up',
+      tag: isTr ? 'Özel Hemşirelik & Klinik Takip' : 'Private In-Suite Nursing Care',
+      title: isTr ? 'Otelde Özel Hemşirelik Hizmeti & 12 Ay Dijital Takip' : 'In-Suite Private Nursing Care & 12-Month Follow-Up',
       desc: isTr
         ? 'Operasyon sonrası otel odanıza gelen uzman hemşirelerimiz pansuman ve vital kontrollerinizi yapar. Ülkenize döndükten sonra da 12 ay boyunca cerrahınızla dijital kontrolleriniz sürer.'
         : 'Specialist clinical nurses visit your hotel suite for routine dressing and vital checks. Enjoy 12 months of structured remote consultations once back home.',
-      image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80',
       highlights: isTr
         ? ['Otel Odasında Hemşirelik Ziyareti', 'Orijinal İlaç & Medikal Bakım Paketi', 'Ömür Boyu Uluslararası Garanti']
         : ['Hotel Suite Nursing Visits', 'Full Medical Care & Rx Kit', 'Lifetime Global Warranty Certificate']

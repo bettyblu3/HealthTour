@@ -180,29 +180,29 @@ export const QuickWhatsAppChat: React.FC<QuickWhatsAppChatProps> = ({ language, 
         </div>
       )}
 
-      {/* Floating Pill / Trigger Button (Warm Cream Luxury Pill) */}
+      {/* Floating Compact Circular FAB Trigger Button (Never Obstructs Content) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        style={{ backgroundColor: '#FAF7F2', borderColor: '#DFD8CC' }}
-        className="pointer-events-auto group flex items-center gap-3 px-4 py-3 rounded-full border text-[#09221C] shadow-[0_15px_40px_rgba(0,0,0,0.45)] transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-[#F2ECE1]"
-        title="WhatsApp Hızlı Danışman"
+        className="pointer-events-auto group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-[0_10px_30px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_35px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none"
+        title={language === 'TR' ? 'WhatsApp Hızlı Danışman' : 'WhatsApp Concierge'}
+        aria-label="WhatsApp"
       >
-        <div className="relative flex items-center justify-center">
-          <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-md">
-            <MessageCircle className="w-5 h-5 fill-white text-[#25D366]" />
-          </div>
-          <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-[#FAF7F2] animate-ping" />
-          <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-[#FAF7F2]" />
-        </div>
+        {/* Subtle Online Ping Indicator */}
+        <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-2 ring-white animate-ping pointer-events-none" />
+        <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-2 ring-white pointer-events-none" />
 
-        <div className="flex flex-col text-left pr-1">
-          <span className="text-xs font-bold text-[#09221C] transition-colors">
-            {language === 'TR' ? 'WhatsApp Danışmanı' : 'WhatsApp Concierge'}
-          </span>
-          <span className="text-[10px] font-mono text-[#4C645B] font-medium">
-            {language === 'TR' ? 'Çevrimiçi • Yanıt: ~1 dk' : 'Online • Reply: ~1 min'}
-          </span>
-        </div>
+        {/* Dynamic Icon: MessageCircle when closed, X when open */}
+        {isOpen ? (
+          <X className="w-6 h-6 text-white stroke-[2.5]" />
+        ) : (
+          <MessageCircle className="w-7 h-7 fill-white text-[#25D366]" />
+        )}
+
+        {/* Elegant Desktop Floating Tooltip (Visible on Hover Only, Left Side) */}
+        <span className="hidden lg:group-hover:flex absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap px-3 py-1.5 rounded-full bg-[#1A120B]/95 backdrop-blur-md text-[#FAF7F2] text-xs font-sans font-medium border border-[#8C7154]/40 shadow-xl pointer-events-none transition-all duration-200">
+          <span className="font-bold text-[#D8BEA3] mr-1.5">●</span>
+          {language === 'TR' ? '7/24 Canlı WhatsApp Danışmanı' : '24/7 WhatsApp Concierge'}
+        </span>
       </button>
 
     </div>
