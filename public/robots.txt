@@ -1,6 +1,6 @@
-# HealthTour & Partners - Robots.txt
+# HealthTour Istanbul - Robots.txt
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://healthtour-partners.com/sitemap.xml
+Sitemap: https://healthtouristanbul.com/sitemap.xml

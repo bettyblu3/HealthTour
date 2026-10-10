@@ -79,18 +79,18 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6 mb-16">
           <div className="flex items-start gap-5">
-            <LeomeEmblem size={52} className="text-mint-300 shrink-0 mt-1" />
-            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-mint-300 leading-[1.05]">
+            <LeomeEmblem size={52} className="text-white/90 shrink-0 mt-1" />
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
               {t.expertiseTitleMain} <br />
-              <span className="text-white">{t.expertiseTitleSub}</span>
+              <span className="text-white/70">{t.expertiseTitleSub}</span>
             </h2>
           </div>
 
           <div className="text-right">
-            <span className="text-sm font-mono tracking-widest text-mint-300 uppercase underline decoration-mint-300/40 underline-offset-4">
+            <span className="text-sm font-mono tracking-widest text-white/80 uppercase underline decoration-white/30 underline-offset-4">
               {t.ourServices}
             </span>
-            <div className="mt-2 text-xs font-mono text-mint-muted">
+            <div className="mt-2 text-xs font-mono text-white/50">
               {language === 'TR' ? 'Ayrıntıları görmek için kartlara tıklayın ⟳' : 'Click cards to flip for details ⟳'}
             </div>
           </div>
@@ -114,27 +114,27 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                 >
                   
                   {/* FRONT SIDE (PHOTO + TITLE + FLIP CTA) */}
-                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 border border-mint-300/20 hover:border-mint-300/60 bg-forest-850/60 backface-hidden flex flex-col justify-between transition-colors shadow-xl group">
+                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 border border-white/10 hover:border-white/30 bg-[#061814]/90 backface-hidden flex flex-col justify-between transition-colors shadow-2xl group">
                     
                     {/* Top Row: Number & Arrow / Flip hint */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono text-mint-300 tracking-widest font-bold">
+                        <span className="text-xs font-mono text-white/80 tracking-widest font-bold">
                           {item.num}
                         </span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-forest-900 border border-mint-300/20 text-mint-muted">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/[0.04] border border-white/15 text-white/70">
                           {item.badge}
                         </span>
                       </div>
 
-                      <div className="flex items-center gap-2 text-xs font-mono text-mint-300 group-hover:text-white transition-colors">
+                      <div className="flex items-center gap-2 text-xs font-mono text-white/60 group-hover:text-white transition-colors">
                         <span className="text-[11px] opacity-80">{t.clickToFlip}</span>
-                        <RotateCw className="w-4 h-4 text-mint-300 group-hover:rotate-180 transition-transform duration-500" />
+                        <RotateCw className="w-4 h-4 text-white/60 group-hover:rotate-180 transition-transform duration-500" />
                       </div>
                     </div>
 
                     {/* Middle Area: Perfect 16:9 Landscape High-Fashion Image */}
-                    <div className="my-5 relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-mint-300/25 bg-forest-950 shadow-inner">
+                    <div className="my-5 relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-white/10 bg-forest-950 shadow-inner">
                       <img
                         src={item.image}
                         alt={item.title}
@@ -145,13 +145,13 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-forest-950/70 to-transparent pointer-events-none" />
 
                       {/* Pill Tag at Top-Left */}
-                      <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest-950/85 backdrop-blur-md border border-mint-300/30 text-[10px] font-mono text-mint-300 flex items-center gap-1.5 shadow-md">
-                        <span className="w-1.5 h-1.5 rounded-full bg-mint-300 animate-pulse" />
+                      <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono text-white/90 flex items-center gap-1.5 shadow-md">
+                        <span className="w-1.5 h-1.5 rounded-full bg-white/80" />
                         <span>{item.categoryLabel}</span>
                       </div>
 
                       {/* Details Badge at Top-Right */}
-                      <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-mint-300/95 text-forest-900 text-[10px] font-mono font-bold flex items-center gap-1 shadow-md">
+                      <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-white/95 text-forest-900 text-[10px] font-mono font-bold flex items-center gap-1 shadow-md hover:bg-white transition-colors">
                         <span>{language === 'TR' ? 'Ayrıntılar' : 'Details'}</span>
                         <ArrowUpRight className="w-3 h-3" />
                       </div>
@@ -159,12 +159,12 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
 
                     {/* Bottom Row: Large Title & Sub-instruction */}
                     <div>
-                      <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white group-hover:text-mint-300 transition-colors">
+                      <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white group-hover:text-white/90 transition-colors">
                         {item.title}
                       </h3>
-                      <div className="mt-2 flex items-center justify-between text-xs font-mono text-mint-muted">
+                      <div className="mt-2 flex items-center justify-between text-xs font-mono text-white/60">
                         <span>5 {language === 'TR' ? 'Prosedür Protokolü' : 'Procedure Protocols'}</span>
-                        <span className="text-mint-300 font-semibold group-hover:underline">
+                        <span className="text-white/80 font-semibold group-hover:text-white transition-colors">
                           {t.flipToDetails} →
                         </span>
                       </div>
@@ -172,13 +172,13 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
 
                   </div>
 
-                  {/* BACK SIDE (SOLID MINT CARD WITH PROCEDURES - Image 3 Style) */}
-                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 bg-mint-300 text-forest-900 rotate-y-180 backface-hidden flex flex-col justify-between shadow-mint-pill">
+                  {/* BACK SIDE (LUXURY DARK PROTOCOL SHEET) */}
+                  <div className="absolute inset-0 rounded-2xl p-7 sm:p-9 bg-[#08221B] text-white border border-white/20 rotate-y-180 backface-hidden flex flex-col justify-between shadow-2xl">
                     
                     {/* Top Row */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono font-bold tracking-widest uppercase opacity-75">
+                        <span className="text-xs font-mono font-bold tracking-widest uppercase text-white/80">
                           {item.num} • {item.title}
                         </span>
                       </div>
@@ -188,7 +188,7 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                           e.stopPropagation();
                           toggleFlip(item.id);
                         }}
-                        className="flex items-center gap-1.5 text-xs font-mono font-bold hover:underline opacity-80"
+                        className="flex items-center gap-1.5 text-xs font-mono font-bold text-white/80 hover:text-white transition-colors"
                         title={t.flipToPhoto}
                       >
                         <span>{t.flipToPhoto}</span>
@@ -201,10 +201,10 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                       {item.procedures.map((proc, pIdx) => (
                         <div
                           key={pIdx}
-                          className="text-sm sm:text-base font-bold tracking-tight flex items-center justify-between border-b border-forest-900/10 pb-2.5"
+                          className="text-sm sm:text-base font-bold tracking-tight flex items-center justify-between border-b border-white/10 pb-2.5 text-white/95"
                         >
                           <span className="pr-4">{proc}</span>
-                          <span className="w-4 h-4 rounded-full bg-forest-900 text-mint-300 flex items-center justify-center text-[10px] shrink-0 font-mono font-bold">
+                          <span className="w-4 h-4 rounded-full bg-white/15 text-white flex items-center justify-center text-[10px] shrink-0 font-mono font-bold">
                             ✓
                           </span>
                         </div>
@@ -212,8 +212,8 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                     </div>
 
                     {/* Bottom Bar: Protocol & Action */}
-                    <div className="flex items-center justify-between pt-4 border-t border-forest-900/15">
-                      <span className="text-xs font-mono font-semibold uppercase opacity-80">
+                    <div className="flex items-center justify-between pt-4 border-t border-white/15">
+                      <span className="text-xs font-mono font-semibold uppercase text-white/60">
                         {t.jciProtocol}
                       </span>
                       
@@ -223,7 +223,7 @@ export const AreasOfExpertise: React.FC<AreasOfExpertiseProps> = ({
                             e.stopPropagation();
                             toggleFlip(item.id);
                           }}
-                          className="px-3 py-1.5 rounded-full border border-forest-900/30 text-xs font-mono hover:bg-forest-900/10 transition-colors"
+                          className="px-3 py-1.5 rounded-full border border-white/20 text-xs font-mono text-white/80 hover:bg-white/10 transition-colors"
                         >
                           ⟲ {t.flipToPhoto}
                         </button>

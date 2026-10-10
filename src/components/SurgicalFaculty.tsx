@@ -70,10 +70,9 @@ export const SurgicalFaculty: React.FC<SurgicalFacultyProps> = ({ language, onOp
               
               {/* Header note inside phone */}
               <div>
-                <p className="text-[11px] sm:text-xs text-mint-muted leading-relaxed font-sans pr-4">
+                <p className="text-[11px] sm:text-xs text-white/70 leading-relaxed font-sans pr-4">
                   {t.facultyQuote}
                 </p>
-                <div className="mt-2 w-1.5 h-1.5 bg-mint-300" />
               </div>
 
               {/* 2x2 Doctors Portraits inside phone */}
@@ -84,18 +83,17 @@ export const SurgicalFaculty: React.FC<SurgicalFacultyProps> = ({ language, onOp
                     onClick={onOpenConsultation}
                     className="group/card cursor-pointer"
                   >
-                    <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-forest-850 border border-mint-300/20 mb-2">
+                    <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-forest-850 border border-white/10 mb-2">
                       <img
                         src={doc.image}
                         alt={doc.name}
                         className="w-full h-full object-cover grayscale contrast-125 group-hover/card:grayscale-0 transition-all duration-300"
                       />
-                      <div className="absolute bottom-1 right-1 w-1.5 h-1.5 bg-mint-300" />
                     </div>
                     <div className="text-[11px] font-bold text-white leading-tight">
                       {doc.name}
                     </div>
-                    <div className="text-[9px] font-mono text-mint-muted truncate">
+                    <div className="text-[9px] font-mono text-white/50 truncate">
                       {doc.role}
                     </div>
                   </div>
@@ -103,9 +101,9 @@ export const SurgicalFaculty: React.FC<SurgicalFacultyProps> = ({ language, onOp
               </div>
 
               {/* Bottom pin inside phone */}
-              <div className="flex items-center justify-between text-[8px] font-mono text-mint-muted border-t border-mint-300/10 pt-3">
+              <div className="flex items-center justify-between text-[8px] font-mono text-white/50 border-t border-white/10 pt-3">
                 <span>ISTANBUL CLINICAL CAMPUS</span>
-                <span className="text-mint-300 font-bold">● ACTIVE</span>
+                <span className="text-white font-bold">● ACTIVE</span>
               </div>
 
             </div>
@@ -114,13 +112,13 @@ export const SurgicalFaculty: React.FC<SurgicalFacultyProps> = ({ language, onOp
 
         </div>
 
-        {/* Monumental Headline Below Phone (Image 4 Style) */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-t border-mint-300/10 pt-10">
+        {/* Monumental Headline Below Phone */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-t border-white/10 pt-10">
           <div>
-            <h3 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-mint-300 leading-tight">
+            <h3 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
               {t.facultyHeading1}
             </h3>
-            <h3 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+            <h3 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white/70 leading-tight">
               {t.facultyHeading2}
             </h3>
           </div>
@@ -128,7 +126,7 @@ export const SurgicalFaculty: React.FC<SurgicalFacultyProps> = ({ language, onOp
           <div className="text-right">
             <button
               onClick={onOpenConsultation}
-              className="text-sm font-mono tracking-widest text-mint-300 hover:text-white uppercase underline decoration-mint-300/40 underline-offset-4 transition-colors"
+              className="text-sm font-mono tracking-widest text-white/80 hover:text-white uppercase underline decoration-white/30 underline-offset-4 transition-colors"
             >
               {t.aboutFaculty}
             </button>

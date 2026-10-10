@@ -55,9 +55,9 @@ export const App: React.FC = () => {
   useEffect(() => {
     document.documentElement.lang = language.toLowerCase();
     if (language === 'TR') {
-      document.title = 'HealthTour & Partners | JCI Akredite Sağlık Turizmi & Lüks Cerrahi İstanbul';
+      document.title = 'Health Tour Istanbul | HealthTour & Partners — Lüks Cerrahi & Sağlık Turizmi';
     } else {
-      document.title = 'HealthTour & Partners | JCI Accredited Medical Tourism & Quiet Luxury Surgery Istanbul';
+      document.title = 'Health Tour Istanbul | HealthTour & Partners — Quiet Luxury Medical Tourism';
     }
   }, [language]);
 
