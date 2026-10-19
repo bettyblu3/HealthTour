@@ -12,6 +12,7 @@ import { AiTreatmentArchitect } from './components/AiTreatmentArchitect';
 import { Footer } from './components/Footer';
 import { ContactConsultationModal } from './components/ContactConsultationModal';
 import { QuickWhatsAppChat } from './components/QuickWhatsAppChat';
+import { Analytics } from '@vercel/analytics/react';
 
 export const App: React.FC = () => {
   const [language, setLanguage] = useState<Language>(() => {
@@ -139,6 +140,9 @@ export const App: React.FC = () => {
         language={language}
         isVisible={!isMenuOpen && !isConsultationModalOpen}
       />
+
+      {/* 9. Vercel Web Analytics */}
+      <Analytics />
 
     </div>
   );
